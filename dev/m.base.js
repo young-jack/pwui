@@ -1,6 +1,7 @@
 (function () {
-	"use stirct";
+    "use stirct";
 
-	var M = window.M || {};
-	
+    var M = window.M || {};
+
+    window.M = M;
 })();
