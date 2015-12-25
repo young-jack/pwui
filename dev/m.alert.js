@@ -6,5 +6,9 @@
  * @param func {Function} 点击对话框按钮时执行的函数。
  */
 M.alert = function (text, func) {
-
+	var _default = {
+		text      : "NULL",
+		btn_text  : "好",
+		callbacks : function () {}
+	}
 }
