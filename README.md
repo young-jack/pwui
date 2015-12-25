@@ -1,3 +1,3 @@
-MWidget
+Mworks 
 ==
->面向Mobile的JavaScript组件（工具）库
+>面向Mobile的JavaScript库
