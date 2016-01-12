@@ -2,9 +2,7 @@
 ==
 ###CSS代码
 ######禁用IOS系统下输入框控件默认样式
-```html
--webkit-appearance: none;
-```
+    -webkit-appearance: none;
 ######启用IOS系统下原生滚动效果
     -webkit-overflow-scrolling: touch;
 ######禁止元素被选中
@@ -15,6 +13,8 @@
     overflow: hidden;white-space: nowrap; text-overflow:ellipsis;
 ######webkit内核浏览器滚动条元素
     ::-webkit-scrollbar{}
+######改写iOS Safari中可点击元素的高亮颜色
+    -webkit-tap-highlight-color: transparent;
 ###JS代码
 ######JS打乱数组最高效的方法
 ```js
