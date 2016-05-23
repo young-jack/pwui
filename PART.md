@@ -45,52 +45,6 @@ $("body").on('touchmove', function(event) {
 //如果页面有逻辑需要,先禁止滚动，然后取消禁止滚动，建议用jQuery方式，取消禁止滚动代码如下
 $("body").off('touchmove');
 ```
-######阿里云调用wxjsapi方式
-```js
-$.ajax({
-    dataType : 'jsonp',
-    url      : "http://slib.sinaapp.com/wxjsapi.php?action=token",
-    data     : {"url":window.location.href.split('#')[0]},
-    async    : true,
-    success  : function (data) {
-        var key = data;
-        wx.config({
-            debug     : false,
-            appId     : key.appId,
-            timestamp : key.timestamp,
-            nonceStr  : key.nonceStr,
-            signature : key.signature,
-            jsApiList : ['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo','startRecord','stopRecord','onVoiceRecordEnd','playVoice','pauseVoice','stopVoice','onVoicePlayEnd','uploadVoice','downloadVoice','chooseImage','previewImage','uploadImage','downloadImage','translateVoice','getNetworkType','openLocation','getLocation','hideOptionMenu','showOptionMenu','hideMenuItems','showMenuItems','hideAllNonBaseMenuItem','showAllNonBaseMenuItem','closeWindow','scanQRCode','chooseWXPay','openProductSpecificView','addCard','chooseCard','openCard']
-        });
-		wx.ready(function(){
-            //do something
-	    });
-    }
-});
-```
-######新浪云调用wxjsapi方式
-```js
-$.ajax({
-    type    : "post",
-    url     : "/wxjs.php?action=token",
-    data    : {"url": window.location.href.split('#')[0]},
-    async   : true,
-    success : function (data) {
-        var key = JSON.parse(data);
-        wx.config({
-            debug     : false,
-            appId     : key.appId,
-            timestamp : key.timestamp,
-            nonceStr  : key.nonceStr,
-            signature : key.signature,
-            jsApiList : ['onMenuShareTimeline','onMenuShareAppMessage','onMenuShareQQ','onMenuShareWeibo','startRecord','stopRecord','onVoiceRecordEnd','playVoice','pauseVoice','stopVoice','onVoicePlayEnd','uploadVoice','downloadVoice','chooseImage','previewImage','uploadImage','downloadImage','translateVoice','getNetworkType','openLocation','getLocation','hideOptionMenu','showOptionMenu','hideMenuItems','showMenuItems','hideAllNonBaseMenuItem','showAllNonBaseMenuItem','closeWindow','scanQRCode','chooseWXPay','openProductSpecificView','addCard','chooseCard','openCard']
-        });
-        wx.ready(function(){
-            //do something
-        });
-    }
-});
-```
 ######微信推送抓取视频地址程序(单个视频)
 ```js
 //使用方法：用chrome打开推送链接，按F12（windows系统）调出开发者工具，将如下代码复制粘贴到console控制台即可
