@@ -14,18 +14,18 @@
 ######webkit内核浏览器滚动条元素
     ::-webkit-scrollbar{}
 ######输入框placeholder样式    
-input::-webkit-input-placeholder {
-color: #fff !important; /* WebKit browsers */
-}
-input:-moz-placeholder {
-color: #fff !important; /* Mozilla Firefox 4 to 18 */
-}
-input::-moz-placeholder {
-color: #fff !important; /* Mozilla Firefox 19+ */
-}
-input:-ms-input-placeholder {
-color: #fff !important; /* Internet Explorer 10+ */
-}
+    input::-webkit-input-placeholder {
+    color: #fff !important; /* WebKit browsers */
+    }
+    input:-moz-placeholder {
+    color: #fff !important; /* Mozilla Firefox 4 to 18 */
+    }
+    input::-moz-placeholder {
+    color: #fff !important; /* Mozilla Firefox 19+ */
+    }
+    input:-ms-input-placeholder {
+    color: #fff !important; /* Internet Explorer 10+ */
+    }
 ######改写iOS Safari中可点击元素的高亮颜色
     -webkit-tap-highlight-color: transparent;
 ###JS代码
