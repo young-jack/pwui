@@ -64,7 +64,7 @@ $("body").off('touchmove');
 var url = document.getElementsByTagName("iframe")[0].getAttribute("data-src").split("?")[1];
 var reg = new RegExp("(^|&)vid=([^&]*)(&|$)");
 var r = url.match(reg);
-window.open("http://v.qq.com/page/"+ decodeURIComponent(r[2]) +".html");
+window.open("http://v.qq.com/x/page/"+ decodeURIComponent(r[2]) +".html");
 ```
 ###HTML代码
 ######调用微信WebView内置图片查看功能
