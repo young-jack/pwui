@@ -1,19 +1,19 @@
 前端代码片段
 ==
-###CSS代码
-######禁用IOS系统下输入框控件默认样式
+### CSS代码
+###### 禁用IOS系统下输入框控件默认样式
     -webkit-appearance: none;
-######启用IOS系统下原生滚动效果
+###### 启用IOS系统下原生滚动效果
     -webkit-overflow-scrolling: touch;
-######禁止元素被选中
+###### 禁止元素被选中
     -webkit-user-select: none;-webkit-touch-callout: none;
-######禁止图片被选中（App内置webview）
+###### 禁止图片被选中（App内置webview）
     pointer-events: none;
-######文字强制不换行并超出父元素宽度多余字以省略号显示
+###### 文字强制不换行并超出父元素宽度多余字以省略号显示
     overflow: hidden;white-space: nowrap; text-overflow:ellipsis;
-######webkit内核浏览器滚动条元素
+###### webkit内核浏览器滚动条元素
     ::-webkit-scrollbar{}
-######输入框placeholder样式    
+###### 输入框placeholder样式    
     input::-webkit-input-placeholder {
     color: #fff !important; /* WebKit browsers */
     }
@@ -26,10 +26,10 @@
     input:-ms-input-placeholder {
     color: #fff !important; /* Internet Explorer 10+ */
     }
-######改写iOS Safari中可点击元素的高亮颜色
+###### 改写iOS Safari中可点击元素的高亮颜色
     -webkit-tap-highlight-color: transparent;
-###JS代码
-######JS打乱数组最高效的方法
+### JS代码
+###### JS打乱数组最高效的方法
 ```js
 var arr=[];
 for(var i=0;i<100;i++){
@@ -39,13 +39,13 @@ arr.sort(function(){ return 0.5 - Math.random() })
 var str=arr.join();
 alert(str);
 ```
-######JS上传图片及时预览
+###### JS上传图片及时预览
 ```js
 var f = document.getelementbyid('upload').files[0];
 var src = window.URL.createObjectURL(f);
 document.getElementById('preview').src = src;
 ```
-######禁止移动端页面滚动
+###### 禁止移动端页面滚动
 ```js
 //原生js方式
 document.body.addEventListener('touchmove', function(event) {
@@ -58,7 +58,7 @@ $("body").on('touchmove', function(event) {
 //如果页面有逻辑需要,先禁止滚动，然后取消禁止滚动，建议用jQuery方式，取消禁止滚动代码如下
 $("body").off('touchmove');
 ```
-######微信推送抓取视频地址程序(单个视频)
+###### 微信推送抓取视频地址程序(单个视频)
 ```js
 //使用方法：用chrome打开推送链接，按F12（windows系统）调出开发者工具，将如下代码复制粘贴到console控制台即可
 var url = document.getElementsByTagName("iframe")[0].getAttribute("data-src").split("?")[1];
@@ -66,13 +66,13 @@ var reg = new RegExp("(^|&)vid=([^&]*)(&|$)");
 var r = url.match(reg);
 window.open("http://v.qq.com/x/page/"+ decodeURIComponent(r[2]) +".html");
 ```
-###HTML代码
-######调用微信WebView内置图片查看功能
+### HTML代码
+###### 调用微信WebView内置图片查看功能
 ```html
 <!--YourImageURL为全地址-->
 <a href="weixin://viewimage/`YourImageURL`">AnyThing</a>
 ```
-######HTML头部标签
+###### HTML头部标签
 ```html
 <!DOCTYPE html> <!-- 使用 HTML5 doctype，不区分大小写 -->
 <html lang="zh-cmn-Hans"> <!-- 更加标准的 lang 属性写法 http://zhi.hu/XyIa -->
