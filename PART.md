@@ -13,6 +13,9 @@
     overflow: hidden;white-space: nowrap; text-overflow:ellipsis;
 ###### webkit内核浏览器滚动条元素
     ::-webkit-scrollbar{}
+###### 可以将其他标签改成可输入状态 
+    contenteditable="true"
+    示例：<p contenteditable="true">可以将其他标签改成可输入状态</p>
 ###### 输入框placeholder样式    
     input::-webkit-input-placeholder {
     color: #fff !important; /* WebKit browsers */
